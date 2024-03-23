@@ -52,3 +52,89 @@ nav a {
     font-size: 28px;
 }
 
+.lottie-container .animation {
+    position : fixed;
+    width : 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: -1;
+    filter: saturate(2);
+}
+
+.animation:after {
+    content: "";
+    background-image: ("https://upload.wikipedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png");
+    width: 200%;
+    height: 200%;
+    position : fixed;
+    top: 0;
+    left: 0;
+    opacity : 0.1;
+    animation: animateGrain 8s steps(10) infinite;
+}
+
+.gradient {
+    width: 100%;
+    height: 200vh;
+    position: relative;
+    background: linear-gradient(
+        180deg,
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,1) 100%
+    );
+    z-index: 1;
+}
+
+.website-content {
+    position: relative;
+    width: 100%;
+    height: 300vh;
+    padding: 2em;
+    background: #000;
+    color: #fff;
+    z-index: 1;
+}
+
+.end-lottie {
+    position: absolute;
+    top: 100vh;
+    width: 100%;
+    height: 1px;
+}
+
+@keyframes animateGrain {
+    0%,
+    100% {
+        transform : translate(0,0);
+    }
+    10% {
+        transform: translate(-5% , -10%);
+    }
+    20% {
+        transform : translate(-15% , -20%);
+    }
+    30% {
+        transform : translate(-5% , -10%);
+    }
+    40% {
+        transform : translate(-15% , -20%);
+    }
+    50% {
+        transform : translate(-5% , -10%);
+    }
+    60% {
+        transform : translate(-15% , -20%);
+    }
+    70% {
+        transform : translate(-5% , -10%);
+    }
+    80% {
+        transform : translate(-15% , -20%);
+    }
+    80% {
+        transform : translate(-5% , -10%);
+    }
+    100% {
+        transform : translate(-15% , -20%);
+    }
+}
